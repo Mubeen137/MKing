@@ -1,0 +1,44 @@
+@import '../../assets/scss/theme.scss';
+
+.cover-nav{
+    padding: 25px 15%;
+    transition: all 1.5s;
+
+    &.style{
+        background-color: var(--bkg-color);
+        box-shadow: 0 0 8px 1px var(--shadow-color);
+    }
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .links{
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+
+        .link{
+            cursor: pointer;
+            position: relative;
+
+            &:hover{
+                font-weight: 500;
+            }
+        }
+        
+        .active-link{
+            content: "";
+            padding: 2px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            right: 50%;
+            background: var(--btn-bg-color);
+            border-radius: 50%;
+        }
+    }
+}

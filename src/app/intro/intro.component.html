@@ -1,0 +1,51 @@
+<div class="intro-wrap">
+    <div class="top">
+        <div class="name">Abdulhameed Mubeen</div>
+        <div class="title">Front-End Web Application Designer</div>
+        <div class="location">Based in Nigeria</div>
+    </div>
+
+    <div class="mid-section">
+        <div class="left">
+            <div class="topic">Biography</div>
+            <div class="detail">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid inventore asperiores quos enim
+                expedita nostrum sit!
+            </div>
+
+            <div class="topic">Contact</div>
+            <div class="detail">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+
+            <div class="topic">Services</div>
+            <div class="detail">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+
+        <div class="center">
+            <div><img class="image" src="assets/img/profile-pic.jpg" alt="Profile Pic"></div>
+        </div>
+
+        <div class="right">
+            <div class="topic">Years of Experience</div>
+            <div class="detail amount">5</div>
+
+            <div class="topic">Customer Satisfaction</div>
+            <div class="detail amount">100%</div>
+
+            <div class="topic">Projects Done</div>
+            <div class="detail amount">30</div>
+        </div>
+    </div>
+
+    <div class="logo-section">
+        <div class="subject">I have worked with</div>
+        <div class="logo-cover" [ngClass]="{'logo-cover': true, 'dark': isDark}">
+            <div *ngFor="let logo of logoList" class="logo">
+                <img [src]="logo" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+    </div>
+</div>

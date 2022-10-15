@@ -1,0 +1,85 @@
+@import '../../assets/scss/theme.scss';
+
+.intro-wrap{
+    margin: 5% auto 0
+}
+
+.top{
+    text-align: center;
+    line-height: 1.5;
+
+    .name{
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .location{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.mid-section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 5em;
+
+    .left{
+        width: 30%;
+        text-align: left;
+    }
+
+    .center{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+        .image{
+            padding: 20px;
+            border: 1px solid var(--text-color);
+            border-radius: 14em;
+            height: 54vh;
+            width: 23em;
+        }
+    }
+
+    .right{
+        width: 30%;
+        text-align: right;
+    }
+}
+
+.logo-section{
+    padding: 40px 0;
+
+    .subject{
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    .logo-cover{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px 0;
+        flex-wrap: wrap;
+
+        &.dark{
+            background: #333333;
+            border-radius: 20px;
+            border: 1px dashed #eee;
+        }
+    
+        .logo{
+            width: 60px;
+            padding-top: 20px;
+        }
+    }
+}

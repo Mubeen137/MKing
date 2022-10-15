@@ -1,0 +1,21 @@
+body{
+    --text-color: #111;
+    --header-color: #777;
+    --bkg-color: #eee;
+    --btn-text-color: white;
+    --btn-bg-color: #000; 
+    --shadow-color: #ccc; 
+    --divide-color: #0000001f;
+    --card-bkg-color: white;
+}
+
+body.dark-theme{
+    --text-color: #fff;
+    --header-color: #ccc;
+    --bkg-color: #000;
+    --btn-text-color: black;
+    --btn-bg-color: #fff;
+    --shadow-color: #333; 
+    --divide-color: #ffffff1f;
+    --card-bkg-color: #333;
+}

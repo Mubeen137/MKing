@@ -1,1 +1,86 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@import './assets/scss/theme.scss';
+@import './assets/scss/font.scss';
+@import './assets/scss/global.scss';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$portfolio-brand: (
+    A100: #ffffff,
+    A200: #777777,
+    A400: #eeeeee,
+    A700: #000000,
+    contrast:(
+      A100: rgba(black, 0.87),
+      A200: rgba(black, 0.87),
+      A400: rgba(black, 0.87),
+      A700: white,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Mubeen-portfolio-primary: mat.define-palette($portfolio-brand, A700, A700, A100);
+$Mubeen-portfolio-accent: mat.define-palette($portfolio-brand, A200, A200, A400);
+
+// The warn palette is optional (defaults to red).
+$Mubeen-portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$Mubeen-portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $Mubeen-portfolio-primary,
+    accent: $Mubeen-portfolio-accent,
+    warn: $Mubeen-portfolio-warn,
+  )
+));
+
+$portfolio-brand-dark: (
+    A100: #000,
+    A200: #777777,
+    A400: #111,
+    A700: #fff,
+    contrast:(
+      A100: rgba(white, 0.87),
+      A200: rgba(white, 0.87),
+      A400: rgba(white, 0.87),
+      A700: black,
+    )
+);
+
+$Mubeen-portfolio-primary-dark: mat.define-palette($portfolio-brand-dark, A700, A700, A100);
+$Mubeen-portfolio-accent-dark: mat.define-palette($portfolio-brand-dark, A200, A200, A400);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$Mubeen-portfolio-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $Mubeen-portfolio-primary-dark,
+    accent: $Mubeen-portfolio-accent-dark,
+    warn: $Mubeen-portfolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($Mubeen-portfolio-theme);
+
+.darkMode{
+  @include mat.all-component-themes($Mubeen-portfolio-dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body {background-color: var(--bkg-color); transition: all 1.5s;}
+h1, p, div{color: var(--text-color);}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
