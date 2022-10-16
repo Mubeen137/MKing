@@ -1,5 +1,5 @@
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { map } from 'rxjs';
 import { AppService } from '../app.service';
 import { getCurrentTimePeriod } from '../helpers/time-period';
@@ -10,7 +10,7 @@ import { getCurrentTimePeriod } from '../helpers/time-period';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  toggleControl = new FormControl(false);
+  toggleControl = new UntypedFormControl(false);
 
   checktime: number = 0;
   theme: boolean = false;
