@@ -2,6 +2,8 @@
     <app-nav-bar></app-nav-bar>
 </div>
 
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+
 
 <div class="body-wrap">
     <!-- section for summary -->
