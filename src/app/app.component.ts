@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { loadFull } from 'tsparticles';
 import { ClickMode, Container, Engine, HoverMode, MoveDirection, OutMode } from 'tsparticles-engine';
 import { loadParticlesOptions } from "tsparticles-engine";
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,13 @@ export class AppComponent{
   title = 'Mubeen-portfolio';
 
   id = "tsparticles";
+  theme: string = '';
+
+  constructor(private app: AppService){
+    this.app.getThemeStyle().subscribe(el=>{
+      this.theme = el
+    })
+  }
 
   /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
   particlesUrl = "http://foo.bar/particles.json";
@@ -48,10 +56,10 @@ export class AppComponent{
     },
     particles: {
       color: {
-        value: "#000000"
+        value: this.theme == 'dark-theme' ? '#ffffff' : "#000000"
       },
       links: {
-        color: "#000000",
+        color: this.theme == 'dark-theme' ? '#ffffff' : "#000000",
         distance: 100,
         enable: true,
         opacity: 0.5,
@@ -73,12 +81,12 @@ export class AppComponent{
       number: {
         density: {
           enable: true,
-          area: 500
+          area: 200
         },
-        value: 30
+        value: 3
       },
       opacity: {
-        value: 0.5
+        value: 1
       },
       shape: {
         type: "circle"
