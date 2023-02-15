@@ -1,17 +1,48 @@
 @import '../../assets/scss/theme.scss';
+@import '../../assets/scss/mixins.scss';
+
+.cover{
+    padding: 0 15%;
+
+    @include for-desktop-mid{
+        padding: 0 10%;
+    }
+
+    @include for-menu-mobile{
+        padding: 0 5%;
+    }
+}
 
 .top-msg{
     font-size: 30px;
     font-weight: 600;
     text-align: center;
     padding: 2em 0;
+
+    @include for-small-phone-only{
+        padding: 1em 0;
+    }
 }
 
 .skills-cover{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    padding: 2em 0;
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    gap: 20px;
+
+    @include for-menu-mobile{
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+
+    @include for-small-phone-only{
+        grid-template-columns: 32% 32% 32%;
+    }
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
     .shade{
         background-color: var(--shadow-color);
@@ -45,4 +76,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include for-small-phone-only{
+        flex-direction: column;
+    }
 }

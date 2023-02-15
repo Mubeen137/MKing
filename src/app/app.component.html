@@ -2,9 +2,6 @@
     <app-nav-bar></app-nav-bar>
 </div>
 
-<!-- <ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)"></ng-particles> -->
-
-
 <div class="body-wrap">
     <!-- section for summary -->
     <app-intro></app-intro>
@@ -14,4 +11,10 @@
 
     <!-- section for contact and footer -->
     <app-footer></app-footer>
+</div>
+
+<div [ngClass]="{'hide': isScroll, 'scroll-to-top': !isScroll}">
+    <button mat-icon-button color="primary" style="height: 100%; width: 100%;" (click)="toTop()">
+        <mat-icon id="ico">expand_less</mat-icon>
+    </button>
 </div>

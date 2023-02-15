@@ -30,7 +30,9 @@ import { NgParticlesModule } from 'ng-particles';
     
     NgParticlesModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

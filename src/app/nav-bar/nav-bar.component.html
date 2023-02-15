@@ -1,5 +1,10 @@
 <div [ngClass]="{'cover-nav': true, 'style': !isScroll}">
     <div class="nav darkMode">
+        <!-- <div class="blur"></div> -->
+        <div style="width: 20%;" class="flex-el">
+            <mat-icon>diamond</mat-icon> Mking
+        </div>
+
         <div class="links">
             <div class="link" (click)="scrollToSection('skill')">
                 <div>Skills</div>
@@ -15,10 +20,6 @@
                 <div>Contact</div>
                 <div [ngClass]="{'active-link': scrollTo == 'contact'}"></div>
             </div>
-        </div>
-
-        <div style="width: 60%; text-align: center;">
-            <mat-icon>diamond</mat-icon>
         </div>
 
         <div style="width: 20%; text-align: end;" class="flex-end">

@@ -1,12 +1,71 @@
 <div class="intro-wrap">
     <div class="top">
-        <div class="name fade">Abdulhameed Mubeen</div>
-        <div class="title fade delay-1">Front-End Web Application Designer</div>
-        <div class="location fade delay-2">Based in Nigeria</div>
+        <div>
+            <div class="name"> 
+                <span id="hi">Hi</span>, 
+                <div style="display: flex;"><span style="white-space: nowrap;">I am </span> &nbsp;<div id="nm" class="typing">Abdulhameed Mubeen</div></div>
+            </div>
+            <div class="title">Web Application Engineer</div>
+            <div class="location">Based in Nigeria</div>
+            <div>
+                <button mat-stroked-button color="primary" class="big-but">Download CV</button>
+            </div>
+        </div>
+
+        <div class="center">
+            <!-- <div><img class="image" src="assets/img/profile-pic.jpg" alt="Profile Pic"></div> -->
+            <div class="small-cards one">
+                <div class="hd">Front-End Developer</div>
+                <div class="txt">4+ Years Experience</div>
+            </div>
+
+            <div class="small-cards two">
+                <div><img src="assets/img/skills/angular.png" width="30" alt=""></div>
+            </div>
+
+            <div class="wiggle">
+                <!--?xml version="1.0" standalone="no"?-->
+                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                            <stop id="stop1" stop-color="blue" offset="0%"></stop>
+                            <stop id="stop2" stop-color="#8787ff" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#sw-gradient)"
+                        d="M18.1,-28.6C22.4,-21.8,24.1,-15.1,26.3,-8.5C28.5,-1.9,31.3,4.6,29.3,9.1C27.3,13.7,20.5,16.3,14.9,18.8C9.2,21.2,4.6,23.5,0.2,23.3C-4.3,23.1,-8.5,20.3,-16.2,18.5C-23.9,16.7,-35,15.8,-37.2,11.5C-39.3,7.2,-32.6,-0.6,-28,-7.4C-23.4,-14.1,-21,-19.9,-16.7,-26.8C-12.4,-33.7,-6.2,-41.7,0.3,-42.2C6.9,-42.6,13.8,-35.5,18.1,-28.6Z"
+                        width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                        style="transition: all 0.3s ease 0s;"></path>
+                </svg>
+            </div>
+        </div>
     </div>
 
     <div class="mid-section">
-        <div class="left">
+        <!-- <ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)"></ng-particles> -->
+
+        <div class="top-msg">About Me</div>
+
+        <div class="detail mb-4">
+            Hello 👋, welcome to my portfolio site. I am a Full-Stack Web Developer with focus on Front-End programming using Angular, i currently boast 4 years of experience on web programming and have worked on multiple large and small sized applications.
+            Through my time working, i have engaged with multiple high-end clients and gained effective communication skills and conversant with the life-cycle of a product creation and maintenance. I focus on creating efficient code and code structures using best practice. <br>Simply, i am a problem solver 😎
+        </div>
+
+        <div class="flex-around">
+            <div class="section">
+                <div class="detail amount">4</div>
+                <div class="topic">Years of Experience</div>
+            </div>
+            <div class="section">
+                <div class="detail amount">100%</div>
+                <div class="topic">Customer Satisfaction</div>
+            </div>
+            <div class="section">
+                <div class="detail amount">30</div>
+                <div class="topic">Projects Done</div>
+            </div>
+        </div>
+        <!-- <div class="left">
             <div class="topic slide-top">Biography</div>
             <div class="detail slide-in-left delay-1">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid inventore asperiores quos enim
@@ -22,13 +81,11 @@
             <div class="detail slide-in-left delay-1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
-        </div>
+        </div> -->
 
-        <div class="center fade delay-3 ">
-            <div><img class="image" src="assets/img/profile-pic.jpg" alt="Profile Pic"></div>
-        </div>
 
-        <div class="right">
+
+        <!-- <div class="right">
             <div class="topic slide-top">Years of Experience</div>
             <div class="detail amount slide-in-right delay-1">5</div>
 
@@ -37,12 +94,12 @@
 
             <div class="topic slide-top">Projects Done</div>
             <div class="detail amount slide-in-right delay-1">30</div>
-        </div>
+        </div> -->
     </div>
 
     <div class="logo-section">
         <div class="subject">I have worked with</div>
-        <div class="logo-cover" [ngClass]="{'logo-cover': true, 'dark': isDark}">
+        <div [ngClass]="{'logo-cover': true, 'dark': isDark}">
             <div *ngFor="let logo of logoList" class="logo">
                 <img [src]="logo" style="width: 100%; height: 100%;">
             </div>
