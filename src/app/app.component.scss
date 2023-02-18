@@ -1,9 +1,43 @@
+@import '../assets/scss/mixins.scss';
+
 .nav{
     position: sticky;
-    top: 0;
+    top: 30px;
+    z-index: 9999;
+
+        @include for-menu-mobile{
+            top: 0;
+        }
 }
 
 .body-wrap{
-    padding: 0 15%;
     margin: 0;
+}
+
+.scroll-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    background: scroll;
+    background: #4646ff5e;
+    border-radius: 50%;
+    /* filter: blur(1px); */
+    width: 60px;
+    height: 60px;
+
+    #ico{
+        font-size: 45px;
+        width: 100%;
+        animation: jump 1.5s infinite;
+    }
+}
+
+@keyframes jump {
+    25%{
+        transform: translateY(-5px);
+    }
+    75%{
+        transform: translateY(5px);
+    }
 }

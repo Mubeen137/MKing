@@ -1,12 +1,14 @@
 body{
     --text-color: #111;
     --header-color: #777;
-    --bkg-color: #eee;
+    --bkg-color: #fff;
     --btn-text-color: white;
+    --mid-bkg-color: #00002238;
     --btn-bg-color: #000; 
     --shadow-color: #ccc; 
     --divide-color: #0000001f;
     --card-bkg-color: white;
+    --blur-bkg: #ffffffde;
 }
 
 body.dark-theme{
@@ -14,8 +16,10 @@ body.dark-theme{
     --header-color: #ccc;
     --bkg-color: #000;
     --btn-text-color: black;
+    --mid-bkg-color: #000022;
     --btn-bg-color: #fff;
     --shadow-color: #333; 
     --divide-color: #ffffff1f;
     --card-bkg-color: #333;
+    --blur-bkg: #323232e8;
 }

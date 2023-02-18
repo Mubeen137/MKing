@@ -1,45 +1,36 @@
-<div style="margin-top: 6em;">
+<div style="margin-top: 6em;" #contact>
     <div class="card flex-btw">
         <div class="left">
             <div class="sub-topic">My Contacts</div>
 
             <div class="flex-el mt-1">
                 <div>
-                    <mat-icon>location_on</mat-icon>
+                    <mat-icon style="color: red;">location_on</mat-icon>
                 </div>
                 <div class="detail">Abuja, Nigeria.</div>
             </div>
 
-            <div class="flex-el mb-1">
+            <div class="flex-el">
                 <div>
-                    <mat-icon>phone</mat-icon>
+                    <mat-icon style="color: blue;">phone</mat-icon>
                 </div>
                 <div class="detail">(+234) 0816 593 1631, (+234) 0909 432 1717</div>
             </div>
 
-            <div class="sub-topic">Reach me on:</div>
-
-            <div class="flex-btw wrap">
-                <div class="flex-el social">
-                    <div><img src="assets/img/social/fb.png" id="social-img" alt=""></div>
-                    <div class="social-text">@AbdulhameedMubeen</div>
+            <div class="flex-el mb-1">
+                <div>
+                    <mat-icon style="color: #005d97;">mail</mat-icon>
                 </div>
-
-                <div class="flex-el social">
-                    <div><img src="assets/img/social/in.png" id="social-img" alt=""></div>
-                    <div class="social-text">@AbdulhameedMubeen</div>
-                </div>
+                <div class="detail">mohdmubeen137@gmail.com</div>
             </div>
 
-            <div class="flex-btw wrap">
-                <div class="flex-el social">
-                    <div><img src="assets/img/social/lk.png" id="social-img" alt=""></div>
-                    <div class="social-text">@AbdulhameedMubeen</div>
-                </div>
+            <div class="sub-topic">Reach me on:</div>
 
-                <div class="flex-el social">
-                    <div><img src="assets/img/social/wt.png" id="social-img" alt=""></div>
-                    <div class="social-text">@AbdulhameedMubeen</div>
+            <div class="grid">
+                <div class="flex-el social" *ngFor="let social of socialLinks" #socialElement (mouseover)="animate(socialElement)">
+                    <span [ngStyle]="{'background': social.color}"></span>
+                    <div><img [src]="social.icon" id="social-img" alt=""></div>
+                    <div class="social-text">{{social.handle}}</div>
                 </div>
             </div>
         </div>
@@ -50,14 +41,14 @@
     </div>
 </div>
 
-<div class="divider">
+<div class="divider" style="margin: 20px 0;">
     <mat-divider class="divide"></mat-divider>
 </div>
 
 <div>
-    <div class="flex-btw">
-        <div>
-            <mat-icon>diamond</mat-icon>
+    <div class="flex-btw" style="padding: 0 30px;">
+        <div class="flex-el">
+            <mat-icon>diamond</mat-icon> Mking
         </div>
 
         <div class="detail">&copy; Copyright 2022. Powered by the Author.</div>

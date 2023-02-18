@@ -16,7 +16,7 @@ $portfolio-brand: (
     A100: #ffffff,
     A200: #777777,
     A400: #eeeeee,
-    A700: #000000,
+    A700: blue,
     contrast:(
       A100: rgba(black, 0.87),
       A200: rgba(black, 0.87),
@@ -81,6 +81,6 @@ $Mubeen-portfolio-dark-theme: mat.define-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body {background-color: var(--bkg-color); transition: all 1.5s;}
+html, body {background-color: var(--bkg-color); transition: all 1.5s; scroll-behavior: smooth;}
 h1, p, div{color: var(--text-color);}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}

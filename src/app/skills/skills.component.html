@@ -1,67 +1,69 @@
-<!-- skills section -->
-<div style="margin-top: 6em;" #skill>
-    <div class="top-msg">My Skills</div>
+<div class="cover">
+    <!-- skills section -->
+    <div style="margin-top: 6em;" #skill>
+        <div class="top-msg">My Skills</div>
 
-    <div class="skills-cover">
-        <div *ngFor="let skill of skillList">
-            <div class="shade">
-                <div class="logo"><img [src]="skill.logo" style="width: 100%; height: 100%;" alt=""></div>
+        <div class="skills-cover">
+            <div *ngFor="let skill of skillList" class="skill">
+                <div class="shade">
+                    <div class="logo"><img [src]="skill.logo" style="width: 100%; height: 100%;" alt=""></div>
 
-                <div class="percent">{{skill.percent}}</div>
-            </div>
-            <div class="name">{{skill.name}}</div>
-        </div>
-    </div>
-</div>
-
-<div class="divider">
-    <mat-divider class="divide"></mat-divider>
-</div>
-
-<div style="margin-top: 2em;">
-    <div class="top-msg">Education & Experiences</div>
-
-    <div class="exp-cover">
-        <div class="section">
-            <div class="topic">2018</div>
-
-            <div class="detail">BSc. Information and Communication Science</div>
-            <div class="sub-topic">University of Ilorin, Nigeria.</div>
-        </div>
-
-        <div class="section">
-            <div class="topic">2019 - 2020</div>
-
-            <div class="detail">Nigerian Communication Satellite</div>
-            <div class="sub-topic">BroadBand Engineer</div>
-        </div>
-
-        <div class="section">
-            <div class="topic">2020 - Till present</div>
-
-            <div>
-                <div class="detail">Comsoft Limited</div>
-                <div class="sub-topic">Software Developer</div>
+                    <div class="percent">{{skill.percent}}</div>
+                </div>
+                <div class="name">{{skill.name}}</div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="divider">
-    <mat-divider class="divide"></mat-divider>
-</div>
+    <div class="divider">
+        <mat-divider class="divide"></mat-divider>
+    </div>
 
-<div style="margin-top: 2em;" #project>
-    <div class="top-msg">My Latest Projects</div>
+    <div style="margin-top: 2em;">
+        <div class="top-msg">Education & Experiences</div>
 
-    <div class="flex-btw wrap">
-        <div class="section" *ngFor="let proj of projects">
-            <div class="pic">
-                <img [src]="proj.image" style="width: 100%; height: 100%;" alt="">
+        <div class="exp-cover">
+            <div class="section">
+                <div class="topic">2018</div>
+
+                <div class="detail">BSc. Information and Communication Science</div>
+                <div class="sub-topic">University of Ilorin, Nigeria.</div>
             </div>
 
-            <div class="sub-topic">{{proj.name}}</div>
-            <div class="detail">{{proj.detail}}</div>
+            <div class="section">
+                <div class="topic">2019 - 2020</div>
+
+                <div class="detail">Nigerian Communication Satellite</div>
+                <div class="sub-topic">BroadBand Engineer</div>
+            </div>
+
+            <div class="section">
+                <div class="topic">2020 - Till present</div>
+
+                <div>
+                    <div class="detail">Comsoft Limited</div>
+                    <div class="sub-topic">Software Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">
+        <mat-divider class="divide"></mat-divider>
+    </div>
+
+    <div style="margin-top: 2em;" #project>
+        <div class="top-msg">My Latest Projects</div>
+
+        <div class="flex-btw wrap">
+            <div class="section" *ngFor="let proj of projects">
+                <div class="pic">
+                    <img [src]="proj.image" style="width: 100%; height: 100%;" alt="">
+                </div>
+
+                <div class="sub-topic">{{proj.name}}</div>
+                <div class="detail">{{proj.detail}}</div>
+            </div>
         </div>
     </div>
 </div>
